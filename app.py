@@ -145,17 +145,17 @@ elif add_selectbox == 'Select AOI Data Parameters':
     
     format = 'MMM DD, YYYY'  # format output
         
-    start1 = datetime.date(year=2024,month=1,day=1)-relativedelta(years=5) #  I need some range in the past
+    start1 = datetime.date(year=2020,month=1,day=1)-relativedelta(years=1) #  I need some range in the past
 
-    start2 = datetime.date(year=2024,month=11,day=1)
+    start2 = datetime.date(year=2021,month=11,day=1)
     st.text("")
     st.text("")
     
-    st.write("Note-1:The difference between start date and end date should not exceed more than 4 months.")
+    st.write("Note-1:The difference between start date and end date should not exceed more than 3 months.")
     st.text("")
     st.text("")
 
-    st.write("Note-2: The minimum difference between start date and end date should be 2 months.")
+    st.write("Note-2: The minimum difference between start date and end date should be 15 days.")
     st.text("")
     st.text("")
     
@@ -169,9 +169,9 @@ elif add_selectbox == 'Select AOI Data Parameters':
                                'start2'],
                       index=['date']))
 
-    end1 = datetime.date(year=2024,month=2,day=28)-relativedelta(years=5) #  I need some range in the past
+    end1 = datetime.date(year=2020,month=1,day=15)-relativedelta(years=1) #  I need some range in the past
     
-    end2 = datetime.date(year=2024,month=12,day=31)
+    end2 = datetime.date(year=2021,month=12,day=31)
     
     max_days = end2-end1
         
@@ -344,7 +344,7 @@ elif add_selectbox == 'Visualizations':
     
     st.subheader('PROJECT VISUALIZATIONS')
     st.markdown('<h4>Harmisar Lake</h4>', unsafe_allow_html=True)
-    st.image("harmisar_lake.png", width=400)
+    st.image("hamisar_lake.png", width=400)
     st.markdown('<h4>Shinai Lake</h4>', unsafe_allow_html=True)
     st.image("shinai_lake.png", width=400)
     st.markdown('<h4>Tappar Lake</h4>', unsafe_allow_html=True)
